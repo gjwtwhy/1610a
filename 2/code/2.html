@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+<center>
+<table>
+    <tr>
+        <td>全选<input type="checkbox" class="quanxuan"></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="cla" value="1"></td>
+        <td>111111111111</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="cla" value="2"></td>
+        <td>222222222222222</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="cla" value="3"></td>
+        <td>33333333333</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="cla" value="4"></td>
+        <td>444444444</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="cla" value="5"></td>
+        <td>55555555</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <input type="button" value="提交" onclick="up();">
+        </td>
+    </tr>
+</table>
+</center>
+<script>
+    $(".quanxuan").on('click',function () {
+        //$(".cla").prop("checked",true);
+        $(".cla").each(function () {
+            if($(this).prop('checked')){
+                $(this).prop('checked',false);
+            } else {
+                $(this).prop('checked',true);
+            }
+        })
+    })
+    
+    function up() {
+        //获取选中项的ID
+        var ids = [];
+        $('.cla').each(function () {
+            if($(this).prop('checked')){
+                ids.push($(this).val());
+            }
+        });
+        console.log(ids);
+    }
+</script>
+</body>
+</html>

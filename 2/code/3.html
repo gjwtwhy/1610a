@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+<center>
+
+<table border="1" id="tlist">
+    <thead>
+    <tr>
+        <td colspan="4">
+            搜索:<input type="text" id="name"><input type="button" value="搜索" onclick="pageList(1);">
+        </td>
+    </tr>
+    <tr>
+        <td>ID</td>
+        <td>姓名</td>
+        <td>性别</td>
+        <td>年龄</td>
+    </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+</center>
+<script>
+    $(function () {
+        pageList(1);
+    })
+    function pageList(p) {
+        var name = $("#name").val();
+        //1，ajax获取数据
+        $.ajax({
+            url: 'do.php?a=list',
+            type: 'get',
+            data: {'p': p,'name':name},
+            dataType: 'json',
+            success: function (e) {
+                $("#tlist tbody").empty();
+               //2循环数据
+                var tr='';
+                $.each(e.data.list,function (i,v) {
+                    tr+='<tr><td>'+v.y_id+'</td><td>'+v.y_name+'</td><td></td><td></td></tr>';
+                });
+                //3向表格追加数据
+                $("#tlist tbody").append(tr);
+
+                //分页数据
+                var tr2 = '<tr><td colspan="4">';
+                for(var i=1; i<=e.data.totalPage; i++){
+                    tr2 += "<a href='#' onclick='pageList("+i+")'>"+i+'</a>  ';
+                }
+                tr2+= '</td></tr>';
+                $("#tlist tbody").append(tr2);
+            }
+        });
+
+    }
+</script>
+</body>
+</html>

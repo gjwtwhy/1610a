@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+<center>
+<table border="1">
+    <tr>
+        <td>
+            <input id="b_1" value="今天是个好日子" style="display: none;border-color: #0bb1f8" ONBLUR="unchange(1);"/>
+            <span id="a_1" onclick="change(1)">今天是个好日子</span>
+        </td>
+    </tr>
+    <tr bgcolor="red">
+        <td>
+            <input id="b_2" value="大家都是好孩子" style="display: none;border-color: #0bb1f8" ONBLUR="unchange(2);"/>
+            <span id="a_2" onclick="change(2)">大家都是好孩子</span>
+        </td>
+    </tr>
+</table>
+</center>
+<script>
+    function change(id) {
+        $("#a_"+id).hide();
+        $("#b_"+id).show();
+    }
+    function unchange(id) {
+        var name = $("#b_"+id).val();
+        $("#a_"+id).html(name);
+        $("#b_"+id).hide();
+        $("#a_"+id).show();
+    }
+    // $("#a").on('click',function () {
+    //     $("#a").hide();
+    //     $("#b").show();
+    // })
+</script>
+</body>
+</html>

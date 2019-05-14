@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<center>
+    <form action="{:url('news/index')}" method="get">
+<table>
+    <tr>
+        <td colspan="4">
+            搜索：标题<input type="text" name="book_name">
+            <select name="auther">
+                <option value="">请选择</option>
+                <option value="夜刺">夜刺</option>
+                <option value="醉二三">醉二三</option>
+            </select>
+            <input type="submit" value="搜索">
+        </td>
+    </tr>
+    <tr>
+        <td>ID</td>
+        <td>标题</td>
+        <td>作者</td>
+        <td>操作</td>
+    </tr>
+    {volist name='list' id='vo'}
+    <tr>
+        <td>{$vo.book_id}</td>
+        <td>{$vo.book_name}</td>
+        <td>{$vo.auther}</td>
+        <td></td>
+    </tr>
+    {/volist}
+    <tr>
+        <td colspan="4">
+            {$list|raw}
+        </td>
+    </tr>
+</table>
+    </form>
+</center>
+</body>
+</html>

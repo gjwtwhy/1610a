@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="renderer" content="webkit">
+<title></title>
+<link rel="stylesheet" href="css/pintuer.css">
+<link rel="stylesheet" href="css/admin.css">
+<script src="js/jquery.js"></script>
+<script src="js/pintuer.js"></script>
+</head>
+<body>
+<div class="panel admin-panel margin-top">
+  <div class="panel-head" id="add"><strong><span class="icon-pencil-square-o"></span> 商品批量上传</strong></div>
+  <div class="body-content">
+    <form method="post" class="form-x" action="">
+    	<div class="form-group">
+        <div class="label">
+          <label>数据格式：</label>
+        </div>
+        <div class="field">
+         <select class="input" style="width: auto;">
+      <option value="0">请选择...</option>
+      <option value="ecshop">ecshop支持数据格式</option><option value="taobao">淘宝助理支持数据格式</option><option value="paipai">拍拍助理支持数据格式</option><option value="paipai3">拍拍助理3.0支持数据格式</option><option value="taobao46">淘宝助理4.6支持数据格式</option>    </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="label">
+          <label>所属分类：</label>
+        </div>
+        <div class="field">
+         <select class="input float-left margin-big-right" style="width: auto;">
+         		<option>所属分类</option>
+         </select>
+          <select class="input float-left margin-big-right" style="width: auto;">
+         		<option>全部分类</option>
+         </select>
+          <select class="input float-left margin-big-right" style="width: auto;">
+         		<option>全部分类</option>
+         </select>
+        </div>
+      </div>
+      <div class="form-group">
+					<div class="label">
+						<label>文件编码：</label>
+					</div>
+					<div class="field">
+							<select class="input float-left" style="width: auto;">
+      <option value="UTF8">国际化编码（utf8）</option><option value="GB2312">简体中文</option><option value="BIG5">繁体中文</option>    </select>
+					</div>
+				</div>
+			<div class="form-group">
+											<div class="label">
+												<label>上传批量csv文件：</label>
+											</div>
+											<div class="field">
+							          <input type="file"  class="input" style="width: auto;" >
+											</div>
+											<div class="label">
+											</div>
+											<div class="field">
+							          <p>（CSV文件中一次上传商品数量最好不要超过1000，CSV文件大小最好不要超过500K.）</p>
+							          <p><a href="#">	下载批量CSV文件（美国英语）</a></p>
+							          <p><a href="#">	下载批量CSV文件（简体中文）</a></p>
+							          <p><a href="#">	下载批量CSV文件（繁体中文）</a></p>
+											</div>
+										</div>  
+      <div class="form-group">
+        <div class="text-center">
+							      <div class="field">
+							      	<a class="button bg-green">确定</a>
+							      </div>
+							    </div>
+      </div>
+      <div class="form-group">
+											<div class="label">
+												<label>使用说明：</label>
+											</div>
+											<div class="field">
+												<p>根据使用习惯，下载相应语言的csv文件，例如中国内地用户下载简体中文语言的文件，港台用户下载繁体语言的文件；</p>
+												<p>填写csv文件，可以使用excel或文本编辑器打开csv文件；</p>
+												<p>碰到“是否精品”之类，填写数字0或者1，0代表“否”，1代表“是”；</p>
+												<p>商品图片和商品缩略图请填写带路径的图片文件名，其中路径是相对于 [根目录]/images/ 的路径，例如图片路径为[根目录]/images/200610/abc.jpg，只要填写 200610/abc.jpg 即可；</p>
+												<p class="text-red">如果是淘宝助理格式请确保cvs编码为在网站的编码，如编码不正确，可以用编辑软件转换编码。</p>
+												<p>将填写的商品图片和商品缩略图上传到相应目录，例如：[根目录]/images/200610/；</p>
+												<p class="text-red">请首先上传商品图片和商品缩略图再上传csv文件，否则图片无法处理。</p>
+												<p>选择所上传商品的分类以及文件编码，上传csv文件</p>
+											</div>
+										</div>
+    </form>
+  </div>
+</div>
+</body></html>

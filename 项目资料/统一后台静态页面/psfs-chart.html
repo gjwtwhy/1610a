@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="renderer" content="webkit">
+<title>交易信息</title>
+<link rel="stylesheet" href="css/pintuer.css">
+<link rel="stylesheet" href="css/admin.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery.js"></script>
+<script src="js/pintuer.js"></script>
+<script type="text/javascript" src="jeDate/jedate.js"></script>
+</head>
+<body>
+<div class="panel admin-panel">
+  <div class="panel-head" id="add"><strong><span class="icon-pencil-square-o"></span> 订单统计</strong></div>
+  <div class="body-content">
+  	<div class="padding border-bottom" style="padding-top:0 ;">
+    	<p><strong>销售总额:</strong> &nbsp;&nbsp; 4849 &nbsp;&nbsp;&nbsp;  <strong>有效订单总金额:</strong>  &nbsp;&nbsp;¥2066.00 &nbsp;&nbsp;&nbsp;   <strong>总点击数:</strong>  &nbsp;&nbsp;15248&nbsp;&nbsp;&nbsp;    <strong>每千点击订单数:</strong>  &nbsp;&nbsp;0.2 &nbsp;&nbsp;&nbsp;   <strong>每千点击购物额:</strong> &nbsp;&nbsp; ¥135.49&nbsp;&nbsp;&nbsp;</p>
+    </div>
+  	<div class="padding border-bottom">
+      <ul class="search" style="padding-left:10px;">
+          <li>
+           		开始时间
+          </li>
+          <li>
+            <input type="text" class="input" id="dateinfo"/>
+          </li>
+          <li>
+            	结束时间
+          </li>
+          <li>
+            <input type="text" class="input" id="dateinfoa"/>
+          </li>
+        <li>
+          <a href="javascript:void(0)" class="button border-main icon-search"> 查询</a></li>
+      </ul>
+    </div>
+    <div class="clearfix margin">
+			      <span class="l_f">
+			      <a href="ddtj-chart.html" class="button bg-main button-small">订单概况</a>
+			      <a href="psfs-chart.html" class="button bg-red button-small">配送方式</a>
+			      <a href="zffs-chart.html" class="button bg-red button-small">支付方式</a>
+			       </span>
+			       <span class="r_f"></span>
+		</div>
+    	<div id="Statistics" class="Statistics"></div> 
+		
+		
+    
+  	
+    	 
+  </div>
+</div>
+<script type="text/javascript" src="js/dist/echarts.js"></script>
+<script type="text/javascript">
+//初始化宽度、高度  
+ $(".widget-box").height($(window).height()); 
+ $(".page_right_style").width($(window).width()-220);
+ //$(".table_menu_list").width($(window).width()-240);
+  //当文档窗口发生改变时 触发  
+    $(window).resize(function(){
+	$(".widget-box").height($(window).height());
+	 $(".page_right_style").width($(window).width()-220);
+	 //$(".table_menu_list").width($(window).width()-240);
+	}) 
+/**************/
+     require.config({
+            paths: {
+                echarts: './js/dist'
+            }
+        });
+        require(
+            [
+                'echarts',
+				'echarts/theme/macarons',
+                'echarts/chart/pie',   // 按需加载所需图表，如需动态类型切换功能，别忘了同时加载相应图表
+                'echarts/chart/funnel'
+            ],
+            function (ec,theme) {
+                var myChart = ec.init(document.getElementById('Statistics'),theme);
+			
+			option = {
+    title : {
+        text: '配送方式',
+        x:'center'
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    legend: {
+        
+        x : 'center',
+        y : 'bottom',
+        data:['圆通速递']
+    },
+    toolbox: {
+        show : false,
+        feature : {
+            mark : {show: false},
+            dataView : {show: false, readOnly: true},
+            magicType : {
+                show: true, 
+                type: ['pie', 'funnel'],
+                option: {
+                    funnel: {
+                        x: '25%',
+                        width: '50%',
+                        funnelAlign: 'left',
+                        max: 6200
+                    }
+                }
+            },
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    calculable : true,
+    series : [
+        {
+            name:'',
+            type:'pie',
+            radius : '55%',
+            center: ['50%', '60%'],
+            data:[
+                {value:1200, name:'圆通速递'},
+               
+
+            ]
+        }
+    ]
+};
+   myChart.setOption(option);
+			}
+);
+</script>
+  <script type="text/javascript">
+    //jeDate.skin('gray');
+    jeDate({
+		dateCell:"#dateinfo",
+		format:"YYYY-MM-DD hh:mm:ss",
+		isinitVal:true,
+		isTime:true, //isClear:false,
+		minDate:"2017-01-08 00:00:00",
+	});
+	jeDate({
+		dateCell:"#dateinfoa",
+		format:"YYYY-MM-DD hh:mm:ss",
+		isinitVal:true,
+		isTime:true, //isClear:false,
+		minDate:"2017-01-08 00:00:00",
+	});
+</script>  
+</body></html>

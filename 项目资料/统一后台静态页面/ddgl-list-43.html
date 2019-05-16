@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="renderer" content="webkit">
+<title>退货单列表</title>
+<link rel="stylesheet" href="css/pintuer.css">
+<link rel="stylesheet" href="css/admin.css">
+<link rel="stylesheet" href="css/style.css">
+<!--<link rel="stylesheet" href="css/ace.min.css">-->
+<script src="js/jquery.js"></script>
+<script src="js/pintuer.js"></script>
+</head>
+<body>
+<form method="post" action="" id="listform">
+  <div class="panel admin-panel">
+    <div class="panel-head"><strong class="icon-reorder"> 退货单列表</strong> <a href="" style="float:right; display:none;">添加字段</a></div>
+    <div class="padding border-bottom">
+      <ul class="search" style="padding-left:10px;">
+        <li> <a class="button border-main icon-plus-square-o" href="cate-4.html"> 添加退货原因</a> </li>
+      </ul>
+    </div>
+    <table class="table table-hover text-center">
+      <tr>
+        <th>退换货原因</th>
+        <th>是否显示</th>
+        <th>排序</th>
+        <th width="250">操作</th>
+      </tr>
+      <volist name="list" id="vo">
+        <tr>
+          <td><a href="ddgl-list-5.html" class="text-red">款式不喜欢</a>
+           </td>
+          <td>是</td>
+          <td>5</td>
+          <td><div class="button-group"><a class="button border-main" href="cate-4.html"><span class="icon-edit"></span> 编辑</a><a class="button border-red" href="javascript:void(0)" onclick="return del(1,1,1)"><span class="icon-trash-o"></span> 删除</a> </div></td>
+        </tr>
+      <tr>
+        <td colspan="10"><div class="pagelist"> <a href="">上一页</a> <span class="current">1</span><a href="">2</a><a href="">3</a><a href="">下一页</a><a href="">尾页</a> </div></td>
+      </tr>
+    </table>
+  </div>
+</form>
+<script type="text/javascript">
+
+
+//单个删除
+function del(id,mid,iscid){
+	if(confirm("您确定要删除吗?")){
+		
+	}
+}
+
+
+
+
+
+</script>
+</body>
+</html>
+
+
+

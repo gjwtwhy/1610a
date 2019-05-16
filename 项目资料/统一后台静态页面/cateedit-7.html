@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="renderer" content="webkit">
+<title></title>
+<link rel="stylesheet" href="css/pintuer.css">
+<link rel="stylesheet" href="css/admin.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery.js"></script>
+<script src="js/pintuer.js"></script>
+</head>
+<body>
+<div class="panel admin-panel margin-top">
+  <div class="panel-head" id="add"><strong><span class="icon-pencil-square-o"></span> 商品批量导出</strong></div>
+  <div class="body-content">
+    <form method="post" class="form-x" action="">
+    	<div class="form-group">
+					<div class="label">
+						<label>使用说明：</label>
+					</div>
+					<div class="field">
+						<p>使用搜索条件每次只允许搜索符合条件的50个商品。</p>
+						<p>如果用户需要导出某分类下的所有的商品，在条件中选择分类后，不需点击搜索，直接选择数据格式和编码导出即可。</p>
+					</div>
+				</div>
+      <div class="form-group">
+        <div class="label">
+          <label>导出条件：</label>
+        </div>
+        <div class="field">
+         <select class="input float-left margin-big-right" style="width: auto;">
+         		<option>所属分类</option>
+         </select>
+          <select class="input float-left margin-big-right" style="width: auto;">
+         		<option>全部分类</option>
+         </select>
+          <select class="input float-left margin-big-right" style="width: auto;">
+         		<option>全部分类</option>
+         </select>
+         <input type="text" class="input float-left margin-big-right" style="width: 200px;" />
+         <a href="javascript:void(0)" class="button border-main icon-search float-left" onclick="changesearch()"> 搜索</a>
+        </div>
+      </div>
+      
+      <div class="guanlian" style="padding: 0 20px 20px 20px;">
+									<ul>
+										<li class="box-gl">
+											<div class="box-gl-a">
+													
+											</div>
+										</li>
+										<li class="boxa-gl">
+											<div class="box-gl-b">
+												<ul>
+													<li><button>&lt;&lt;</button></li>
+													<li><button>&lt;</button></li>
+													<li><button>&gt;</button></li>
+													<li><button>&gt;&gt;</button></li>
+												</ul>
+											</div>
+										</li>
+										<li class="box-gl">
+											<div class="box-gl-a">
+												
+											</div>
+										</li>
+										<div class="clear"></div>
+									</ul>
+								</div>
+      
+      <div class="form-group">
+					<div class="label">
+						<label>数据格式：</label>
+					</div>
+					<div class="field">
+							<select name="data_format" class="input" style="width: auto;" id="data_format"><option value="ecshop">导出到ECShop数据格式</option><option value="taobao V4.3">导出淘宝助理V4.3支持数据格式</option><option value="taobao V4.6">导出淘宝助理V4.6支持数据格式</option><option value="taobao">导出淘宝助理支持数据格式</option><option value="paipai">导出到拍拍助理支持数据格式</option><option value="paipai4">导出到拍拍助理3.0支持数据格式</option><option value="custom">导出到自定义数据格式</option></select>
+					</div>
+				</div>
+					<div class="selectBox">
+						<div class="selectBox-a">
+							<div class="form-group">
+										<div class="label">
+											<label>导出编码：</label>
+										</div>
+										<div class="field">
+						          	<select name="charset" class="input" style="width: auto;">
+				              <option value="UTF8">UTF8</option>
+				              <option value="GB2312">GB2312</option>
+				              <option value="GBK">GBK</option>
+				            </select>
+										</div>
+									</div>
+								</div>
+								<div class="selectBox-b hidden">
+									<div class="form-group">
+										<div class="label">
+											<label>宝贝栏目ID：</label>
+										</div>
+										<div class="field">
+						          	<input type="text" class="input w50"/>
+										</div>
+										<div class="label">
+											<label></label>
+										</div>
+										<div class="field">
+						          	宝贝栏目ID为淘宝分类的ID，如若不确定，请填写0
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="label">
+											<label>平邮价格：</label>
+										</div>
+										<div class="field">
+						          	<input type="text" class="input w50" />
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="label">
+											<label>快递价格：</label>
+										</div>
+										<div class="field">
+						          	<input type="text" class="input w50" />
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="label">
+											<label>EMS价格：</label>
+										</div>
+										<div class="field">
+						          	<input type="text" class="input w50" />
+										</div>
+									</div>
+								</div>
+								<div class="selectBox-c hidden">
+									<div class="form-group">
+										<div class="label">
+											<label>平邮价格：</label>
+										</div>
+										<div class="field">
+						          	<input type="text" class="input w50" />
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="label">
+											<label>快递价格：</label>
+										</div>
+										<div class="field">
+						          	<input type="text" class="input w50" />
+										</div>
+									</div>
+								</div>
+								<div class="selectBox-d hidden">
+									<div class="guanlian" style="padding: 0 20px 20px 20px;">
+									<ul>
+										<li class="box-gl">
+											<div class="box-gl-a">
+													
+											</div>
+										</li>
+										<li class="boxa-gl">
+											<div class="box-gl-b">
+												<ul>
+													<li><button>&lt;&lt;</button></li>
+													<li><button>&lt;</button></li>
+													<li><button>&gt;</button></li>
+													<li><button>&gt;&gt;</button></li>
+												</ul>
+											</div>
+										</li>
+										<li class="box-gl">
+											<div class="box-gl-a">
+												
+											</div>
+										</li>
+										<div class="clear"></div>
+									</ul>
+								</div>
+									<div class="form-group">
+										<div class="label">
+											<label>导出的编码：</label>
+										</div>
+										<div class="field">
+						          	<select name="charset" class="input" style="width: auto;">
+				              <option value="UTF8">UTF8</option>
+				              <option value="GB2312">GB2312</option>
+				              <option value="GBK">GBK</option>
+				            </select>
+										</div>
+									</div>
+								</div>
+						</div>
+      <div class="form-group">
+        <div class="text-center">
+							      <div class="field">
+							      	<a class="button bg-green">确定</a>
+							      </div>
+							    </div>
+      </div>
+    </form>
+  </div>
+</div>
+<script type="text/javascript">
+			$(function(){
+			    $("#data_format").change(function(){
+			    	var checkText=$("#data_format").find("option:selected").val();
+			    	if(checkText=="ecshop"){
+			    		alert(this.val());
+			    		$(".selectBox .selectBox-a").removeClass("hidden");
+			    	}
+			      else if(checkText=="taobao V4.3||taobao V4.6||taobao"){
+			    		alert(checkText)
+			    		$(".selectBox .selectBox-b").removeClass("hidden");
+			    	}
+			    	else if(checkText=="paipai||paipai4"){
+			    		alert(checkText)
+			    		$(".selectBox .selectBox-c").removeClass("hidden");
+			    	}
+			    	else(checkText=="custom"){
+			    		alert(checkText)
+			    		$(".selectBox .selectBox-d").removeClass("hidden");
+			    	};
+			    	
+			    });
+			});
+
+		</script>
+</body></html>

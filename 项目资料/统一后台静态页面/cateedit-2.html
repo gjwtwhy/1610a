@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="renderer" content="webkit">
+<title></title>
+<link rel="stylesheet" href="css/pintuer.css">
+<link rel="stylesheet" href="css/admin.css">
+<script src="js/jquery.js"></script>
+<script src="js/pintuer.js"></script>
+</head>
+<body>
+<div class="panel admin-panel margin-top">
+  <div class="panel-head" id="add"><strong><span class="icon-pencil-square-o"></span>添加品牌</strong></div>
+  <div class="body-content">
+    <form method="post" class="form-x" action="">        
+      <div class="form-group">
+        <div class="label">
+          <label>品牌中文名称：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="title" value="" />
+          <div class="tips"></div>
+        </div>
+      </div>        
+      <div class="form-group">
+        <div class="label">
+          <label>品牌英文名称：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="s_title" value=""/>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="label">
+          <label>品牌网址：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" />
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="label">
+          <label>品牌LOGO：</label>
+        </div>
+        <div class="field">
+							          <input type="text" id="url1" name="slogo" class="input tips" style="width:25%; float:left;" value="" data-toggle="hover" data-place="right" data-image="" title="">
+							          <input type="button" class="button bg-blue margin-left" id="image1" value="+ 浏览上传" style="display: block; float: left;">
+							        	<div class="clear"></div>
+											</div>
+      </div>
+      <div class="form-group">
+        <div class="label">
+          <label>品牌描述：</label>
+        </div>
+        <div class="field">
+          <textarea class="input"></textarea>
+        </div>
+      </div>
+      <div class="form-group">
+      	<div class="label">
+          <label>排序：</label>
+        </div>
+        <div class="field">
+      		<input type="text" class="input" />
+   			</div>
+        </div>
+        <div class="form-group">
+      	<div class="label">
+          <label>是否显示：</label>
+        </div>
+        <div class="field">
+      		<div class="product-mulde product-mulde-a">
+						      	<ul>
+						      		<li><input type="radio" name="jg" value="是"><label>是</label><input type="radio" name="jg" value="否"><label>否</label>
+						      		</li>
+						      	</ul>
+						      </div>
+   			</div>
+        </div>
+        <div class="form-group">
+      	<div class="label">
+          <label>加入推荐：</label>
+        </div>
+        <div class="field">
+      		<div class="product-mulde product-mulde-a">
+						      	<ul>
+						      		<li><input type="radio" name="jg" value="是"><label>是</label><input type="radio" name="jg" value="否"><label>否</label>
+						      		</li>
+						      	</ul>
+						      </div>
+   			</div>
+        </div>
+      <div class="form-group">
+        <div class="text-center">
+							      <div class="field">
+							      	<a class="button bg-green">确定</a>
+							      	<a class="button bg-red">重置</a>
+							      </div>
+							    </div>
+      </div>
+    </form>
+  </div>
+</div>
+</body></html>

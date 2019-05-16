@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="renderer" content="webkit">
+<title></title>
+<link rel="stylesheet" href="css/pintuer.css">
+<link rel="stylesheet" href="css/admin.css">
+<script src="js/jquery.js"></script>
+<script src="js/pintuer.js"></script>
+</head>
+<body>
+<div class="panel admin-panel margin-top">
+  <div class="panel-head" id="add"><strong><span class="icon-pencil-square-o"></span> 添加新包装</strong></div>
+  <div class="body-content">
+    <form method="post" class="form-x" action="">
+    	<div class="form-group">
+        <div class="label">
+          <label>商品包装名称：</label>
+        </div>
+        <div class="field">
+        	<input type="text" class="input" />
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="label">
+          <label>费用：</label>
+        </div>
+        <div class="field field-tsa">
+         <input type="text" class="input" />
+         <p>使用这个包装所需要支付的费用，免费时设置为0</p>
+        </div>
+      </div>
+      <div class="form-group">
+					<div class="label">
+						<label>免费额度：</label>
+					</div>
+					<div class="field field-tsa">
+         <input type="text" class="input" />
+         <p>当用户消费金额超过这个值时，将免费使用这个包装。设置为0时表明必须支付包装费用</p>
+        </div>
+				</div>
+			<div class="form-group">
+					<div class="label">
+						<label>包装图纸：</label>
+					</div>
+					<div class="field field-tsa">
+	          <input type="file"  class="input" style="width: auto;" >
+	          <p>你已经上传过图片。再次上传时将覆盖原图片</p>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label">
+						包装描述：
+					</div>
+					<div class="field">
+						<textarea class="input">
+						</textarea>
+					</div>
+					<div class="field margin-large-top text-center">
+							          <a class="button bg-green">确定</a>
+							          <a class="button bg-red">重置</a>
+											</div>
+				</div>
+      
+    </form>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="renderer" content="webkit">
+<title></title>
+<link rel="stylesheet" href="css/pintuer.css">
+<link rel="stylesheet" href="css/admin.css">
+<script src="js/jquery.js"></script>
+<script src="js/pintuer.js"></script>
+</head>
+<body>
+<div class="panel admin-panel">
+  <div class="panel-head"><strong><span class="icon-reorder"></span> 图片批量处理</strong></div>
+  <div class="body-content" style="padding: 20px;">
+	  		<form>
+			    	<p>图片批量处理允许您重新生成商品的缩略图以及重新添加水印。</p>
+			    	<p>该处理过程可能会比较慢，请您耐心等候。</p>
+			    	<select class="input float-left margin-big-right" style="width: auto;">
+			    			<option>商品类型</option>
+			    	</select>
+			    	<select class="input float-left margin-big-right" style="width: auto;">
+			    			<option>全部分类</option>
+			    	</select>
+			    	<select class="input float-left margin-big-right" style="width: auto;">
+			    			<option>所有品牌</option>
+			    	</select>
+			    	<select class="input float-left margin-big-right" style="width: auto;">
+			    			<option>所有商品</option>
+			    	</select>
+			    	<div class="clear"></div>
+			    	<div class="product-mulde margin-small-top">
+					      	<ul>
+					      		<li><input type="checkbox" name="jg" value="处理商品图片"><label>处理商品图</label><input type="checkbox" name="jg" value="处理商品相册"><label>处理商品相册</label><input type="checkbox" name="jg" value="重新生成缩略图 "><label>重新生成缩略图 </label><input type="checkbox" name="jg" value="重新生成商品详情图 "><label>重新生成商品详情图 </label>
+					      		</li>
+					      	</ul>
+					      </div>
+					      <div class="product-mulde margin-small-top">
+					      	<ul>
+					      		<li><input type="radio" name="jg" value="新生成图片使用新名称，并删除旧图片"><label>新生成图片使用新名称，并删除旧图片</label><input type="radio" name="jg" value="新生成图片覆盖旧图片"><label>新生成图片覆盖旧图片</label><input type="radio" name="jg" value="出错时忽略错误,继续执行程序 "><label>出错时忽略错误,继续执行程序 </label><input type="radio" name="jg" value="出错时立即提示，并中止程序 "><label>出错时立即提示，并中止程序 </label>
+					      		</li>
+					      	</ul>
+					      </div>
+					      <div class="text-center border-bottom padding-big-bottom">
+					      	<a href="javascript:;" class="button border-main">确定</a>
+					      </div>
+					      <table class="table table-hover text-center">
+					      	<tr><th>页数</th><th>总页数</th><th>处理时间</th></tr>
+					      	<tr>
+					      		<td>1</td><td>1</td><td>2016-12-31 12:03</td>
+					      	</tr>
+					      	<tr>
+					      		<td>1</td><td>1</td><td>2016-12-31 12:03</td>
+					      	</tr>
+					      </table>
+	    	</form>
+  </div>
+</div>
+</body></html>

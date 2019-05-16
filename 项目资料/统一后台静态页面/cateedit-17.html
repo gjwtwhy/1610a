@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="renderer" content="webkit">
+<title></title>
+<link rel="stylesheet" href="css/pintuer.css">
+<link rel="stylesheet" href="css/admin.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery.js"></script>
+<script src="js/pintuer.js"></script>
+<script type="text/javascript" src="jeDate/jedate.js"></script>
+</head>
+<body>
+<div class="panel admin-panel margin-top">
+  <div class="panel-head" id="add"><strong><span class="icon-pencil-square-o"></span> 编辑优惠活动</strong></div>
+  <div class="body-content">
+    <form class="form-x">
+										<div class="form-group">
+											<div class="label">
+												<label>超值礼包名称：</label>
+											</div>
+											<div class="field">
+												<input type="text" class="input" />
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="label">
+												<label>活动开始日期：</label>
+											</div>
+											<div class="field">
+												<input type="text" class="input w50" id="dateinfo" />
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="label">
+												<label>活动结束日期：</label>
+											</div>
+											<div class="field">
+												<input type="text" class="input w50" id="dateinfoa" />
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="label">
+												<label>上传图片：</label>
+											</div>
+											<div class="field">
+												<input type="file" />
+											</div>
+										</div>
+										<div class="form-group">
+							      	<div class="label">
+							          <label>礼包价格：</label>
+							        </div>
+							        <div class="field field-tsa">
+							      		<input type="text" class="input"/>
+							      		<p>购买礼包的价格</p>
+							   			</div>
+							        </div>
+										<div class="form-group">
+											<div class="label">
+												<label>活动描述：</label>
+											</div>
+											<div class="field">
+												<textarea class="input"></textarea>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="label">
+												<label>商品搜索：</label>
+											</div>
+											<div class="field">
+												<select class="input float-left margin-big-right" style="width: auto;">
+													<option>所有分类</option>
+												</select>
+												<select class="input float-left margin-big-right" style="width: auto;">
+													<option>所有品牌</option>
+												</select>
+												<input type="text" class="input float-left" style="width: 200px;" />
+												<button class="button float-left border-main">搜索</button>
+												<div class="clear"></div>
+												</div>
+										</div>
+											<div class="padding">
+												<div class="guanlian">
+													<ul>
+														<li class="box-gl">
+															<p class="text-center">可选商品</p>
+															<div class="box-gl-a">
+																	
+															</div>
+														</li>
+														<li class="boxa-gl">
+															<p class="text-center">操作</p>
+															<div class="box-gl-b">
+																<ul>
+																	<li>数量<input type="text" class="input" style="width: 80%; margin: 0 auto;" /></li>
+																	<li><button>>></button></li>
+																	<li><button><</button></li>
+																	<li><button>></button></li>
+																	<li><button>>></button></li>
+																</ul>
+															</div>
+														</li>
+														<li class="box-gl">
+															<p class="text-center">该商品的配件</p>
+															<div class="box-gl-a">
+																
+															</div>
+														</li>
+														<div class="clear"></div>
+													</ul>
+													
+												</div>
+											</div>	
+							        
+										<div class="form-group">
+											<div class="text-center margin-big-top">
+							          <a class="button bg-green">确定</a>
+							          <a class="button bg-red">重置</a>
+											</div>
+										</div>
+										
+									</form>
+  </div>
+</div>
+<script type="text/javascript">
+    //jeDate.skin('gray');
+    jeDate({
+		dateCell:"#dateinfo",
+		format:"YYYY-MM-DD hh:mm:ss",
+		isinitVal:true,
+		isTime:true, //isClear:false,
+		minDate:"2017-01-08 00:00:00",
+	})
+    jeDate({
+		dateCell:"#dateinfoa",
+		format:"YYYY-MM-DD hh:mm:ss",
+		isinitVal:true,
+		isTime:true, //isClear:false,
+		minDate:"2017-01-08 00:00:00",
+	})
+</script>
+</body></html>

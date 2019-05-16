@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="renderer" content="webkit">
+<title>管理员日志</title>
+<link rel="stylesheet" href="css/pintuer.css">
+<link rel="stylesheet" href="css/admin.css">
+<link rel="stylesheet" href="css/style.css">
+<!--<link rel="stylesheet" href="css/ace.min.css">-->
+<script src="js/jquery.js"></script>
+<script src="js/pintuer.js"></script>
+<script src="js/layer/layer.js"></script>
+</head>
+<body>
+  <div class="panel admin-panel">
+    <div class="panel-head"><strong class="icon-reorder"> 管理员日志</strong> <a href="" style="float:right; display:none;">添加字段</a></div>
+    <table class="table table-hover text-center">
+      <tr>
+        <th width="100" style="text-align:left; padding-left:20px;">编号</th>
+        <th>操作者</th>
+        <th>操作日期</th>
+        <th>IP地址</th>
+        <th>操作记录</th>
+      </tr>
+        <tr>
+          <td style="text-align:left; padding-left:20px;"><input type="checkbox" name="id[]" value="" />
+           2045</td>
+          <td>admin</td>
+          <td>2017-01-11 17:36:04</td>
+          <td>106.121.71.49</td>
+          <td>编辑订单: 2017011182245,订单总金额由 128.00 变为 138.00</td>
+        </tr>
+      <tr>
+        <td style="text-align:left; padding:19px 0;padding-left:20px;"><input type="checkbox" id="checkall"/>
+          全选 </td>
+        <td colspan="8" style="text-align:left;padding-left:20px;"><a href="javascript:void(0)" class="button border-red icon-trash-o" style="padding:5px 15px;" onclick="DelSelect()"> 批量删除</a> 
+      </tr>
+      <tr>
+        <td colspan="8"><div class="pagelist"> <a href="">上一页</a> <span class="current">1</span><a href="">2</a><a href="">3</a><a href="">下一页</a><a href="">尾页</a> </div></td>
+      </tr>
+    </table>
+  </div>
+<script type="text/javascript">
+
+
+
+
+//批量删除
+function DelSelect(){
+	var Checkbox=false;
+	 $("input[name='id[]']").each(function(){
+	  if (this.checked==true) {		
+		Checkbox=true;	
+	  }
+	});
+	if (Checkbox){
+		var t=confirm("您确认要删除选中的内容吗？");
+		if (t==false) return false;		
+		$("#listform").submit();		
+	}
+	else{
+		alert("请选择您要删除的内容!");
+		return false;
+	}
+}
+
+function Competence_del(obj,id){
+	layer.confirm('确认要删除吗？',function(index){
+		$(obj).parents("tr").remove();
+		layer.msg('已删除!',{icon:1,time:1000});
+	});
+}
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

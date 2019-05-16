@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="renderer" content="webkit">
+<title>商品列表</title>
+<link rel="stylesheet" href="css/pintuer.css">
+<link rel="stylesheet" href="css/admin.css">
+<link rel="stylesheet" href="css/style.css">
+<!--<link rel="stylesheet" href="css/ace.min.css">-->
+<script src="js/jquery.js"></script>
+<script src="js/pintuer.js"></script>
+<script src="js/layer/layer.js"></script>
+</head>
+<body>
+<form method="post" action="" id="listform">
+  <div class="panel admin-panel">
+    <div class="panel-head"><strong class="icon-reorder"> 商品自动上下架</strong></div>
+    <div class="padding border-bottom">
+      <ul class="search" style="padding-left:10px;">
+        <!--<li> <a class="button border-main icon-plus-square-o" href="add.html"> 发布文章</a> </li>-->
+        <li>
+        	<select class="input float-left" style="width: auto;">
+		        <option value="0">选择清除的日期...</option>
+		        <option value="1">一周之前</option>
+		        <option value="2">一个月之前</option>
+		        <option value="3">三个月之前</option>
+		        <option value="4">半年之前</option>
+		        <option value="5">一年之前</option>
+        	</select>
+          <a href="javascript:void(0)" class="button border-main float-left" >确定</a></li>
+      </ul>
+    </div>
+    <table class="table table-hover text-center">
+      <tr>
+        <th width="100" style="text-align:left; padding-left:20px;">编号</th>
+        <th>商品名称</th>
+        <th>商家名称</th>
+        <th>邮箱/手机</th>
+        <th>发送状态</th>
+        <th>发送方式</th>
+        <th width="200">发送时间</th>
+      </tr>
+      <volist name="list" id="vo">
+        <tr>
+          <td style="text-align:left; padding-left:20px;"><input type="checkbox" name="id[]" value="" />
+           111111</td>
+          <td>圣贤教育 改变命运 1-5集高清6张DVD9（传统文化论坛）</td>
+          <td>商创自营</td>
+          <td>846995781@qq.com</td>
+          <td>发送失败5</td>
+          <td>邮件</td>
+          <td>2016-01-04 14:49:49</td>
+        </tr>
+        
+      <tr>
+        <td colspan="7" style="text-align:left;padding-left:20px;"><a href="javascript:void(0)" class="button border-red" style="padding:5px 15px;">清除日志</a>  
+      </tr>
+      <tr>
+        <td colspan="7"><div class="pagelist"> <a href="">上一页</a> <span class="current">1</span><a href="">2</a><a href="">3</a><a href="">下一页</a><a href="">尾页</a> </div></td>
+      </tr>
+    </table>
+  </div>
+</form>
+
+
+</body>
+</html>

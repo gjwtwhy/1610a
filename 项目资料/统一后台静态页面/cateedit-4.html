@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="renderer" content="webkit">
+<title></title>
+<link rel="stylesheet" href="css/pintuer.css">
+<link rel="stylesheet" href="css/admin.css">
+<script src="js/jquery.js"></script>
+<script src="js/pintuer.js"></script>
+</head>
+<body>
+<div class="panel admin-panel margin-top">
+  <div class="panel-head" id="add"><strong><span class="icon-pencil-square-o"></span>编辑属性</strong></div>
+  <div class="body-content">
+    <form method="post" class="form-x" action="">        
+      <div class="form-group">
+        <div class="label">
+          <label>属性名称：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="title" value="" />
+          <div class="tips"></div>
+        </div>
+      </div>        
+      <div class="form-group">
+        <div class="label">
+          <label>所属商品类型：</label>
+        </div>
+        <div class="field">
+          <select class="input">
+          	<option>请选择</option>
+          	<option>教育影音</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+      	<div class="label">
+          <label>分类筛选样式：</label>
+        </div>
+        <div class="field">
+      		<div class="product-mulde product-mulde-a">
+						      	<ul>
+						      		<li><input type="radio" name="jg" value="普通"><label>普通</label><input type="radio" name="jg" value="颜色"><label>颜色</label>
+						      		</li>
+						      	</ul>
+						      </div>
+   			</div>
+        </div>
+        <div class="form-group">
+		      	<div class="label">
+		          <label>能否进行检索：</label>
+		        </div>
+		        <div class="field">
+		      		<div class="product-mulde product-mulde-a">
+					      	<ul>
+					      		<li><input type="radio" name="jg" value="不需要检索"><label>不需要检索</label><input type="radio" name="jg" value="关键字检"><label>关键字检索</label><input type="radio" name="jg" value="范围检索 "><label>范围检索 </label>
+					      		</li>
+					      	</ul>
+					      </div>
+		   			</div>
+		   			<div class="field">
+		      		不需要该属性成为检索商品条件的情况请选择不需要检索，需要该属性进行关键字检索商品时选择关键字检索，如果该属性检索时希望是指定某个范围时，选择范围检索。
+		   			</div>
+        </div>
+        <div class="form-group">
+      	<div class="label">
+          <label>相同属性值的商品是否关联：</label>
+        </div>
+        <div class="field">
+      		<div class="product-mulde product-mulde-a">
+						      	<ul>
+						      		<li><input type="radio" name="jg" value="是"><label>是</label><input type="radio" name="jg" value="否"><label>否</label>
+						      		</li>
+						      	</ul>
+						      </div>
+   			</div>
+        </div>
+        <div class="form-group">
+		      	<div class="label">
+		          <label>属性是否可选：</label>
+		        </div>
+		        <div class="field">
+		      		<div class="product-mulde product-mulde-a">
+					      	<ul>
+					      		<li><input type="radio" name="jg" value="唯一属性"><label>唯一属性</label><input type="radio" name="jg" value="唯一属性"><label>唯一属性</label><input type="radio" name="jg" value="复选属性  "><label>复选属性  </label>
+					      		</li>
+					      	</ul>
+					      </div>
+		   			</div>
+		   			<div class="field">
+		      		选择"单选/复选属性"时，可以对商品该属性设置多个值，同时还能对不同属性值指定不同的价格加价，用户购买商品时需要选定具体的属性值。选择"唯一属性"时，商品的该属性值只能设置一个值，用户只能查看该值。
+		   			</div>
+        </div>
+      <div class="form-group">
+        <div class="label">
+          <label>可选值列表：</label>
+        </div>
+        <div class="field">
+          <textarea class="input margin-big-bottom" style="min-height: 100px;">
+儿童
+书店
+漫画
+          </textarea>
+          <a href="cateedit-5.html" class="text-yellow">添加属性图片</a>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="text-center">
+							      <div class="field">
+							      	<a class="button bg-green">确定</a>
+							      	<a class="button bg-red">重置</a>
+							      </div>
+							    </div>
+      </div>
+    </form>
+  </div>
+</div>
+</body></html>

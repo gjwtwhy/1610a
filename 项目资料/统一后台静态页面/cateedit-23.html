@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="renderer" content="webkit">
+<title></title>
+<link rel="stylesheet" href="css/pintuer.css">
+<link rel="stylesheet" href="css/admin.css">
+<script src="js/jquery.js"></script>
+<script src="js/pintuer.js"></script>
+</head>
+<body>
+<div class="panel admin-panel margin-top">
+  <div class="panel-head" id="add"><strong><span class="icon-pencil-square-o"></span> 添加会员</strong></div>
+  <div class="body-content">
+    <form method="post" class="form-x" action="">        
+      <div class="form-group">
+        <div class="label">
+          <label>会员名称：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="title" value="" />
+          <div class="tips"></div>
+        </div>
+      </div>        
+      <div class="form-group">
+        <div class="label">
+          <label>邮件地址：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" name="s_title" value=""/>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="label">
+          <label>登录密码：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" />
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="label">
+          <label>确认密码：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input" />
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="label">
+          <label>会员等级：</label>
+        </div>
+        <div class="field">
+          <select class="input" style="width: auto;">
+          	<option>非特殊等级</option>
+          	<option>QQ用户</option>
+          	<option>代销用户</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+      	<div class="label">
+          <label>性别：</label>
+        </div>
+        <div class="field">
+      		<div class="product-mulde product-mulde-a">
+						      	<ul>
+						      		<li><input type="radio" name="jg"><label>保密</label><input type="radio" name="jg"><label>男</label><input type="radio" name="jg"><label>女</label>
+						      		</li>
+						      	</ul>
+						      </div>
+   			</div>
+        </div>
+      <div class="form-group">
+      	<div class="label">
+          <label>出生日期：</label>
+        </div>
+        <div class="field">
+      		<select class="input float-left margin-left" style="width: auto;">
+      			<option>2017</option>
+      		</select>
+      		<select class="input float-left margin-left" style="width: auto;">
+      			<option> 01 </option>
+      		</select>
+      		<select class="input float-left margin-left" style="width: auto;">
+      			<option> 01 </option>
+      		</select>
+   			</div>
+        </div>
+        
+        <div class="form-group">
+        		<div class="label">
+          		<label>地址：</label>
+        		</div>
+        		<div class="field">
+        			<input type="text" class="input" />
+        		</div>
+        </div>
+        <div class="form-group">
+        		<div class="label">
+          		<label>手机：</label>
+        		</div>
+        		<div class="field">
+        			<input type="text" class="input" />
+        		</div>
+        </div>
+        <div class="form-group">
+        <div class="label">
+          <label>头像：</label>
+        </div>
+        <div class="field">
+          <input type="text" id="url1" name="slogo" class="input tips" style="width:25%; float:left;" value="" data-toggle="hover" data-place="right" data-image="" title="">
+          <input type="button" class="button bg-blue margin-left" id="image1" value="+ 浏览上传">
+        </div>
+      </div>
+        <div class="form-group">
+      	<div class="label">
+          <label>密码提示问题：</label>
+        </div>
+        <div class="field">
+      		<select class="input" style="width: auto;">
+      			<option>请选择密码提示问题</option>
+      		</select>
+   			</div>
+        </div>
+        <div class="form-group">
+        		<div class="label">
+          		<label>密码问题答案：</label>
+        		</div>
+        		<div class="field">
+        			<input type="text" class="input" />
+        		</div>
+        </div>
+      <div class="form-group">
+        <div class="text-center">
+							      <div class="field">
+							      	<a class="button bg-green">确定</a>
+							      	<a class="button bg-red">重置</a>
+							      </div>
+							    </div>
+      </div>
+    </form>
+  </div>
+</div>
+</body></html>

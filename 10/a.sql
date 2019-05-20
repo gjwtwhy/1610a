@@ -1,0 +1,38 @@
+CREATE TABLE `sp_admin`(
+  `id` int(4) NOT NULL  AUTO_INCREMENT COMMENT '用户ID',
+  `username` VARCHAR(10) NOT NULL COMMENT '用户名',
+  `pwd` VARCHAR(10) NOT NULL COMMENT '密码',
+  PRIMARY KEY (`id`)
+) ENGINE = InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `sp_role`(
+  `id` int(4) NOT NULL AUTO_INCREMENT COMMENT 'ID',
+  `name` VARCHAR(20) NOT NULL COMMENT '角色名',
+  PRIMARY KEY (`id`)
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `sp_power`(
+  `id` int(4) NOT NULL AUTO_INCREMENT COMMENT 'ID',
+  `pid` int(4) NOT NULL DEFAULT '0' COMMENT '父ID',
+  `name` VARCHAR(20) NOT NULL COMMENT '权限名',
+  `c` VARCHAR(20) NOT NULL COMMENT '控制器名',
+  `a` VARCHAR(20) NOT NULL COMMENT '方法名',
+  `ca` VARCHAR(20) NOT NULL COMMENT '权限地址',
+  PRIMARY KEY (`id`)
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `sp_user_role`(
+  `id` int(4) NOT NULL AUTO_INCREMENT COMMENT 'ID',
+  `uid` int(4) NOT NULL COMMENT '用户ID',
+  `role_id` int(4) NOT NULL COMMENT '角色ID',
+  PRIMARY KEY (`id`)
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `sp_role_power`(
+  `id` int(4) NOT NULL AUTO_INCREMENT COMMENT 'ID',
+  `role_id` int(4) NOT NULL COMMENT '角色ID',
+  `power_id` int(4) NOT NULL COMMENT '权限ID',
+  PRIMARY KEY (`id`)
+) ENGINE = InnoDB DEFAULT CHARSET=utf8;
+
